@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx", // Ensure it's set to "react-jsx" (or "react" if using an older version of React)
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true
+    }
+}
