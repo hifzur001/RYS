@@ -126,3 +126,167 @@
         font-size: 30px;
     }
 }
+.mainHeading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Gradient text effect */
+.mainHeading span {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 80px;
+    vertical-align: middle;
+    transform: translateY(-5px);
+}
+
+/* Floating animation for images */
+.mainHeading span img {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Glowing text effect */
+.mainHeading {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1);
+    animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+            0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.2),
+            0 0 30px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Client logos section animations */
+.grid img {
+    transition: all 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.grid img:hover {
+    transform: translateY(-10px) scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Text reveal animation for the description */
+.hellothere {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #fff, #fff);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    animation: shimmer 3s infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position-x: 100%;
+    }
+    50% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mainHeading {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .mainHeading span {
+        width: 80px;
+        height: 60px;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background gradient animation */
+.bg-black {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-black::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(40, 40, 40, 0.3),
+        transparent
+    );
+    animation: pulse 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Ensure content stays above the animated background */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Letter spacing animation */
+.tracking-widest {
+    animation: letterSpacing 5s ease-in-out infinite alternate;
+}
+
+@keyframes letterSpacing {
+    from {
+        letter-spacing: 0.1em;
+    }
+    to {
+        letter-spacing: 0.15em;
+    }
+}
+
+/* Smooth opacity transitions */
+* {
+    transition: opacity 0.3s ease-in-out;
+}

@@ -130,7 +130,7 @@ const Banner: React.FC = () => {
                                 delay: 1.8
                             }}
                         >
-                            <p className="text-[16px] leading-relaxed">
+                            <p className="text-[16px] leading-relaxed hellothere">
                                 Welcome to my portfolio. Here, artistry meets
                                 functionality. Dive into a curated showcase of
                                 distinctive branding.
