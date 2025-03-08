@@ -1,0 +1,72 @@
+.brands-section {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.brands-carousel {
+    cursor: grab;
+    overflow: hidden;
+}
+
+.brands-carousel:active {
+    cursor: grabbing;
+}
+
+.brands-inner-carousel {
+    display: flex;
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.brand-logo {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* For the Oracle logo */
+.brand-item:nth-child(1) .brand-logo {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(94%) saturate(7471%)
+        hue-rotate(360deg) brightness(99%) contrast(90%);
+}
+
+/* For the Morpheus logos */
+.brand-item:nth-child(2) .brand-logo,
+.brand-item:nth-child(3) .brand-logo {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(86%) saturate(1677%)
+        hue-rotate(165deg) brightness(101%) contrast(101%);
+}
+
+/* For the Samsung logo */
+.brand-item:nth-child(4) .brand-logo {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(92%) saturate(2270%)
+        hue-rotate(214deg) brightness(94%) contrast(88%);
+}
+
+/* For the Monday.com logo */
+.brand-item:nth-child(5) .brand-logo {
+    filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(1103%)
+        hue-rotate(356deg) brightness(99%) contrast(107%);
+}
+
+/* For the Segment logo */
+.brand-item:nth-child(6) .brand-logo {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(11%) saturate(1304%)
+        hue-rotate(118deg) brightness(92%) contrast(88%);
+}
+
+@media (max-width: 768px) {
+    .brands-inner-carousel {
+        gap: 1rem;
+    }
+
+    .brand-item {
+        min-width: 100px;
+        padding: 0.5rem;
+    }
+}

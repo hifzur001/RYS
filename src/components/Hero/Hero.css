@@ -1,0 +1,106 @@
+.hero-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(240, 240, 240, 0.4) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0;
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stats-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.handshake-icon {
+    position: relative;
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.search-handle {
+    position: relative;
+    transform: rotate(-45deg);
+    transform-origin: bottom right;
+    margin-top: -0.5rem;
+    margin-left: 5rem;
+}
+
+.person-illustration {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+@media (max-width: 1023px) {
+    .hero-container::before {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        opacity: 0.5;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .stats-item p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-container {
+        min-height: auto;
+    }
+}
+
+/* Animation for the service cards */
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom styling for buttons */
+.talk-expert-btn {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.talk-expert-btn:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.see-how-btn {
+    transition: all 0.3s ease;
+}
+
+.see-how-btn:hover div {
+    transform: scale(1.1);
+}
