@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap");
+
+.syne {
+    font-family: "Syne", sans-serif;
+}
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+.textsContent {
+    width: 80px;
+    height: 80px;
+}
+.mainHeading {
+    font-size: 80px;
+}
+.marquetexts {
+    font-size: 160px;
+}
+@media screen and (max-width: 768px) {
+    .mainHeading,
+    .marquetexts {
+        font-size: 30px;
+    }
+}
+.mainHeading {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Gradient text effect */
+.mainHeading span {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 80px;
+    vertical-align: middle;
+    transform: translateY(-5px);
+}
+
+/* Floating animation for images */
+.mainHeading span img {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Glowing text effect */
+.mainHeading {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1);
+    animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.1),
+            0 0 20px rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.2),
+            0 0 30px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Client logos section animations */
+.grid img {
+    transition: all 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.grid img:hover {
+    transform: translateY(-10px) scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Text reveal animation for the description */
+.hellothere {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #fff, #fff);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    animation: shimmer 3s infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position-x: 100%;
+    }
+    50% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mainHeading {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .mainHeading span {
+        width: 80px;
+        height: 60px;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background gradient animation */
+.bg-black {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-black::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(40, 40, 40, 0.3),
+        transparent
+    );
+    animation: pulse 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Ensure content stays above the animated background */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Letter spacing animation */
+.tracking-widest {
+    animation: letterSpacing 5s ease-in-out infinite alternate;
+}
+
+@keyframes letterSpacing {
+    from {
+        letter-spacing: 0.1em;
+    }
+    to {
+        letter-spacing: 0.15em;
+    }
+}
+
+/* Smooth opacity transitions */
+* {
+    transition: opacity 0.3s ease-in-out;
+}
